@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <h1>Table Tennis Team Generator</h1>
+        <h1>Table Tennis Pair Generator</h1>
     )
 }
 
