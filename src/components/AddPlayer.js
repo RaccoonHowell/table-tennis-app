@@ -11,6 +11,7 @@ export class AddPlayer extends Component {
 
         this.handleUserInput = this.handleUserInput.bind(this);
         this.handleSubmit= this.handleSubmit.bind(this);
+        this.handleReset= this.handleReset.bind(this);
     }
 
     // updates state when user types in input field
@@ -30,6 +31,14 @@ export class AddPlayer extends Component {
         })
     }
 
+    // resets page to initial state
+    handleReset() {
+        this.setState({
+            userInput: '',
+            players: [],
+        })
+    }
+
     render() {
         return (
             <>
@@ -45,7 +54,7 @@ export class AddPlayer extends Component {
                     </ul>
                 </form>
 
-                <button>Reset</button>
+                <button onClick={ this.handleReset }>Reset</button>
             </>
         );
     }
