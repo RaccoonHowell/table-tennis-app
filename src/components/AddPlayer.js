@@ -54,6 +54,8 @@ export class AddPlayer extends Component {
                     </ul>
                 </form>
 
+                <button>Generate pair</button>
+
                 <button onClick={ this.handleReset }>Reset</button>
             </>
         );
