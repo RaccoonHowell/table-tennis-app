@@ -13,12 +13,14 @@ export class AddPlayer extends Component {
         this.handleSubmit= this.handleSubmit.bind(this);
     }
 
+    // updates state when user types in input field
     handleUserInput(e) {
         this.setState({
             userInput: e.target.value
         })
     }
 
+    // updates player array to add input value on submit
     handleSubmit(e) {
         e.preventDefault();
 
@@ -30,17 +32,21 @@ export class AddPlayer extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" onChange={this.handleUserInput} value={this.state.userInput}/>
+            <>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" onChange={this.handleUserInput} value={this.state.userInput}/>
 
-                <button>Submit</button>
+                    <button>Submit</button>
 
-                <ul>Players
-                    { this.state.players.map((player, i) => (
-                        <li key={ i }>{ player }</li>
-                    )) }
-                </ul>
-            </form>
+                    <ul>Players
+                        { this.state.players.map((player, i) => (
+                            <li key={ i }>{ player }</li>
+                        )) }
+                    </ul>
+                </form>
+
+                <button>Reset</button>
+            </>
         );
     }
 }
