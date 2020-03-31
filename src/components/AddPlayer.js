@@ -43,9 +43,9 @@ export class AddPlayer extends Component {
         return (
             <>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleUserInput} value={this.state.userInput}/>
+                    <input placeholder="Enter player names here" type="text" onChange={this.handleUserInput} value={this.state.userInput}/>
 
-                    <button>Submit</button>
+                    <button>Add player</button>
 
                     <ul>Players
                         { this.state.players.map((player, i) => (
