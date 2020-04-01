@@ -7,7 +7,7 @@ export class AddPlayer extends Component {
         this.state = {
             userInput: '',
             players: [],
-            playersShuffled: [],
+            // playersShuffled: [],
             column1: [],
             column2: [],
         }
@@ -41,7 +41,7 @@ export class AddPlayer extends Component {
         this.setState({
             userInput: '',
             players: [],
-            playersShuffled: [],
+            // playersShuffled: [],
             column1: [],
             column2: [],
         })
@@ -55,22 +55,36 @@ export class AddPlayer extends Component {
     handlePairs() {
         const { players } = this.state;
 
-        const half_length = Math.ceil(players.length / 2);    
+        const halfLength = Math.floor(players.length / 2);    
 
         this.setState({
-            playersShuffled: players.sort(() => Math.random() - 0.5),
+            players: players.sort(() => Math.random() - 0.5),
             // playersShuffled: this.handleShuffle(players),
-            column1: this.playersShuffled.splice(0, half_length),
-            column2: this.playersShuffled.splice(half_length, this.playersShuffled.length),
+            column1: [...players.slice(0, halfLength), this.state.column1],
+            column2: [...players.slice(halfLength, players.length), this.state.column2],
         })
     }
+
+    // handleSplice() {
+    //     const half_length = Math.ceil(this.players.length / 2);    
+
+    //     this.setState({
+    //         column1: this.players.splice(0, half_length),
+    //         column2: this.players.splice(half_length, this.players.length),
+    //     })
+    // }
     
     render() {
         return (
             <>
                 <form onSubmit={this.handleSubmit}>
                     <label>Add an even number of players</label>
-                    <input placeholder="Enter player names here" type="text" onChange={this.handleUserInput} value={this.state.userInput}/>
+
+                    <input 
+                        placeholder="Enter player names here" 
+                        type="text" onChange={this.handleUserInput} 
+                        value={this.state.userInput}
+                    />
 
                     <button>Add player</button>
 
@@ -83,8 +97,18 @@ export class AddPlayer extends Component {
 
                 <button onClick={ this.handlePairs }>Generate pairs</button>
 
-                <p>{this.state.playersShuffled}</p>
+                <ul>Column 1
+                    { this.state.column1.map((player, i) => (
+                        <li key={ i }>{ player }</li>
+                    )) }
+                </ul>
 
+                <ul>Column 2
+                    { this.state.column2.map((player, i) => (
+                        <li key={ i }>{ player }</li>
+                    )) }
+                </ul>
+                
                 <button onClick={ this.handleReset }>Reset</button>
             </>
         );
