@@ -7,9 +7,9 @@ export class AddPlayer extends Component {
         this.state = {
             userInput: '',
             players: [],
-            // playersShuffled: [],
             column1: [],
             column2: [],
+            clicked: false,
         }
 
         this.handleUserInput = this.handleUserInput.bind(this);
@@ -41,38 +41,28 @@ export class AddPlayer extends Component {
         this.setState({
             userInput: '',
             players: [],
-            // playersShuffled: [],
             column1: [],
             column2: [],
+            playersShuffled: [],
         })
     }
 
-    // handleShuffle(array) {
-    //     array.sort(() => Math.random() - 0.5);
-    // }
-
-    // selects player1 and player2 from the players array by setting the players index using Math.random
+    // shuffles the array using Math.random and splits it into 2 arrays using splice
     handlePairs() {
-        const { players } = this.state;
+        // const { players } = this.state;
 
-        const halfLength = Math.floor(players.length / 2);    
+        const halfLength = Math.floor(this.state.players.length / 2);
+        
+        const playersShuffled = [...this.state.players];
 
         this.setState({
-            players: players.sort(() => Math.random() - 0.5),
+            playersShuffled: playersShuffled.sort(() => Math.random() - 0.5),
             // playersShuffled: this.handleShuffle(players),
-            column1: players.slice(0, halfLength),
-            column2: players.slice(halfLength, players.length),
+            column1: playersShuffled.slice(0, halfLength),
+            column2: playersShuffled.slice(halfLength, playersShuffled.length),
+            clicked: true,
         })
     }
-
-    // handleSplice() {
-    //     const half_length = Math.ceil(this.players.length / 2);    
-
-    //     this.setState({
-    //         column1: this.players.splice(0, half_length),
-    //         column2: this.players.splice(half_length, this.players.length),
-    //     })
-    // }
     
     render() {
         return (
@@ -88,11 +78,13 @@ export class AddPlayer extends Component {
 
                     <button>Add player</button>
 
+                    {/* {!this.state.clicked ? */}
                     <ul>Players
                         { this.state.players.map((player, i) => (
                             <li key={ i }>{ player }</li>
                         )) }
                     </ul>
+                    {/* : null} */}
                 </form>
 
                 <button onClick={ this.handlePairs }>Generate pairs</button>
