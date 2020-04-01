@@ -60,8 +60,8 @@ export class AddPlayer extends Component {
         this.setState({
             players: players.sort(() => Math.random() - 0.5),
             // playersShuffled: this.handleShuffle(players),
-            column1: [...players.slice(0, halfLength), this.state.column1],
-            column2: [...players.slice(halfLength, players.length), this.state.column2],
+            column1: players.slice(0, halfLength),
+            column2: players.slice(halfLength, players.length),
         })
     }
 
