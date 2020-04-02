@@ -1,0 +1,82 @@
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    font-weight: normal;
+    src: url("../fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    font-weight: normal;
+    src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    font-weight: normal;
+    src: url("../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Nunito-LightItalic';
+    font-weight: normal;
+    src: url("../fonts/Nunito/Nunito-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Dai';
+    font-weight: normal;
+    src: url("../fonts/Dai/dbsillc.ttf") format("truetype");
+}
+
+h1, h2, h3, h4, h5 {
+    color: black;
+    font-family: "Poppins-Medium", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+    background-color: var(--peach);
+    text-align: center;
+    padding: 7rem;
+}
+
+h2 {
+    font-size: 2rem;  
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+li, p, .card-link, .tag, .post, .label {
+    color: var(--darkgr);
+    font-family: "Nunito-Light", "Arial", sans-serif;
+    font-size: 1rem;   
+}
+
+.card-link {
+    color: var(--lightgr);
+}
+
+.tag {
+    color: white;
+    background-color: var(--turq);
+    padding: 0.5rem;
+    display: inline-block;
+    font-size: 0.7rem; 
+}
+
+.post {
+    font-size: 0.7rem;
+    color: var(--lightgr);
+    margin: 10px 0; 
+}
+
+.sidebar-li li {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 2px;
+}

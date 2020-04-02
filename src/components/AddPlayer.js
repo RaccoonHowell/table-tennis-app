@@ -67,7 +67,7 @@ export class AddPlayer extends Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
+                <form className='form' onSubmit={this.handleSubmit}>
                     <label>Add an even number of players</label>
 
                     <input 

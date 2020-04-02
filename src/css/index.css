@@ -1,0 +1,22 @@
+/* setup */
+@import 'reset.css';
+
+/* atoms */
+/* @import 'typography.css'; */
+@import 'buttons.css';
+@import 'forms.css'; 
+
+/* molecules */
+@import 'header.css';
+@import 'footer.css';
+
+/* pages */
+
+body {
+    background-color:lightgreen;  
+}
+
+label, ul, li {
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

@@ -1,0 +1,11 @@
+h1 {
+    background-color: violet;
+    padding: 2rem;
+    font-size: 3rem;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
