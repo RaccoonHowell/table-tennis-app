@@ -1,0 +1,16 @@
+.columns {
+    display: flow-root;
+        /* grid-template-columns: 67% 33%; 
+    grid-template-rows: repeat(auto); */
+}
+
+.column1{
+    float: left;
+}
+
+/* .vs {
+} */
+
+.column2 {
+    float: right;
+}

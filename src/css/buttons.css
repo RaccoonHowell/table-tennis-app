@@ -1,11 +1,22 @@
 button {
-    display: block;
-    margin: 20px;
+    display: inline-block;
+    margin: 5%;
     height: 40px;
     width: 150px;
     border-radius: 5px;
     background-color: blue;
-    color: violet;
+    color: rgb(211, 154, 211);
     font-size: 1.2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* position: relative; */
+    text-align: center;
+}
+
+.error {
+    /* position: absolute; */
+    top: 0px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    color: red;
 }

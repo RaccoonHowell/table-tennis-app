@@ -10,13 +10,13 @@ export class AddPlayer extends Component {
             column1: [],
             column2: [],
             clicked: false,
+            playersShuffled:[],
         }
 
         this.handleUserInput = this.handleUserInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleReset = this.handleReset.bind(this);
         this.handlePairs = this.handlePairs.bind(this);
-        // this.handleShuffle = this.handleShuffle.bind(this);
     }
 
     // updates state when user types in input field
@@ -65,6 +65,8 @@ export class AddPlayer extends Component {
     }
     
     render() {
+        const { players } = this.state;        
+        
         return (
             <>
                 <form className='form' onSubmit={this.handleSubmit}>
@@ -76,32 +78,43 @@ export class AddPlayer extends Component {
                         value={this.state.userInput}
                     />
 
-                    <button>Add player</button>
+                    <button>Add Player</button>
+
+                </form>
 
                     {/* {!this.state.clicked ? */}
                     <ul>Players
-                        { this.state.players.map((player, i) => (
+                        { players.map((player, i) => (
                             <li key={ i }>{ player }</li>
                         )) }
                     </ul>
                     {/* : null} */}
-                </form>
-
-                <button onClick={ this.handlePairs }>Generate pairs</button>
-
-                <ul>Column 1
-                    { this.state.column1.map((player, i) => (
-                        <li key={ i }>{ player }</li>
-                    )) }
-                </ul>
-
-                <ul>Column 2
-                    { this.state.column2.map((player, i) => (
-                        <li key={ i }>{ player }</li>
-                    )) }
-                </ul>
                 
-                <button onClick={ this.handleReset }>Reset</button>
+
+                {players.length % 2 === 0 && players.length > 0 ?     
+
+                    <button onClick={ this.handlePairs }>Generate Pairs</button>
+                    :
+                    <p className="error">Add another player to make it an even number!</p>
+                }
+
+                <div className='columns'>
+                    <ul className='column1'>
+                        { this.state.column1.map((player, i) => (
+                            <li key={ i }>{ player }</li>
+                        )) }
+                    </ul>
+
+                    <p className='vs'>vs</p>
+
+                    <ul className='column2'>
+                        { this.state.column2.map((player, i) => (
+                            <li key={ i }>{ player }</li>
+                        )) }
+                    </ul>
+                </div>
+                
+                <button onClick={ this.handleReset }>Start Again</button>
             </>
         );
     }
