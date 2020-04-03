@@ -49,9 +49,9 @@ export class AddPlayer extends Component {
 
     // shuffles the array using Math.random and splits it into 2 arrays using splice
     handlePairs() {
-        // const { players } = this.state;
+        const { players } = this.state;
 
-        const halfLength = Math.floor(this.state.players.length / 2);
+        const halfLength = Math.floor(players.length / 2);
         
         const playersShuffled = [...this.state.players];
 
@@ -65,7 +65,9 @@ export class AddPlayer extends Component {
     }
     
     render() {
-        const { players } = this.state;        
+        const { players } = this.state; 
+        
+        const { column1 } = this.state;
         
         return (
             <>
@@ -91,7 +93,7 @@ export class AddPlayer extends Component {
                     {/* : null} */}
                 
 
-                {players.length % 2 === 0 && players.length > 0 ?     
+                { players.length % 2 === 0 && players.length > 0 ?     
 
                     <button onClick={ this.handlePairs }>Generate Pairs</button>
                     :
@@ -104,8 +106,12 @@ export class AddPlayer extends Component {
                             <li key={ i }>{ player }</li>
                         )) }
                     </ul>
-
-                    <p className='vs'>vs</p>
+                    
+                    { column1.length > 0 ?
+                        <p className='vs'>vs</p>
+                        :
+                        null
+                    }  
 
                     <ul className='column2'>
                         { this.state.column2.map((player, i) => (

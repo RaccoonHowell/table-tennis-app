@@ -1,16 +1,18 @@
 .columns {
-    display: flow-root;
-        /* grid-template-columns: 67% 33%; 
-    grid-template-rows: repeat(auto); */
+    /* width: 50%; */
+    display: grid;
+    grid-template-columns: 40% 20% 40%; 
+    grid-template-rows: repeat(auto);
+    text-align: center;
 }
 
 .column1{
-    float: left;
+   margin-left: 45%;
 }
 
-/* .vs {
-} */
+.vs {
+}
 
 .column2 {
-    float: right;
+    margin-right: 45%;
 }

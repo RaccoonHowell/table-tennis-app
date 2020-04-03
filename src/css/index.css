@@ -5,6 +5,7 @@
 /* @import 'typography.css'; */
 @import 'buttons.css';
 @import 'forms.css'; 
+@import 'columns.css';
 
 /* molecules */
 @import 'header.css';
