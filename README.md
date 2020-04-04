@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table Tennis Pair Generator
 
-## Available Scripts
+Developed as my final DevelopMe_ technical challenge, the app generates a table tennis tournament structure from a list of names provided by the user.
 
-In the project directory, you can run:
+Technologies and skills used: React, Javascript, HTML, CSS, Git, Wireframing
 
-### `npm start`
+You can view the finished app by visiting here: http://rachel.developme.space/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Local setup
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Requirements - NPM
 
-### `npm test`
+run git clone to clone this git repository:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```git@github.com:RaccoonHowell/table-tennis-app.git```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+in the project directory run:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`npm install` to install all dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm start` to run the app locally
 
-### `npm run eject`
+### The brief
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The core of the challenge is to create a tool which randomly creates pairings for a table tennis tournament bracket from a list of names collected from the user.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+It's up to you how you implement this, with JavaScript, React, or PHP, as a web page, or as an app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Some optional advanced features might include:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ability to record scores for each player, or mark which player won from each pairing, to create the next round of the tournament playoffs
 
-## Learn More
+- continued rounds created until the final (last 2 players who have won all matches to date play each other, one marked as the winner)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Planning and the build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I did some sketching when planning the basic layout which I then made into a wireframe -
 
-### Code Splitting
+https://github.com/RaccoonHowell/table-tennis-app/blob/master/wireframe.pdf
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+I decided to version manage the project with Git as I found it to be very useful throughout the course.
 
-### Analyzing the Bundle Size
+Having learnt React towards the end of the course I decided to use it to create my app with the possibility of introducing Redux once I had the MVP working and styled.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+As my app has only one page I did the styling using CSS and it wasn't too time consuming but in the future or if I were to have done things differently I'd probably implement Gulp and SASS.
 
-### Making a Progressive Web App
+Initially I thought I would start with the following components:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- AddPlayer - to add players to an array using a form
+- Reset - to reset the page to it's intial state
+- Pair - to generate pairings from the players array
+- Shuffle - to shuffle the pairings
 
-### Advanced Configuration
+However upon starting I created a Header, Footer and AddPlayer component. I decided to get all of my logic for the basic requirements of the task working in the AddPlayer component first and hoped to split it into separate components once it was up and running and the minimum styling had been applied.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Additional features
 
-### Deployment
+- I would like to split the AddPlayer component into smaller component files based on the role of each part of the code and use Redux to do this. I think this would make the code more readable and using Redux would mean I could store state globally and pass information between components more easily
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- I'd try to reduce the number of ternaries within the AddPlayer render section to make the code a bit cleaner
 
-### `npm run build` fails to minify
+- Having focussed on getting the MVP working before moving onto the advanced features I ran out of time. I'd like to set up a back end using Laravel to store user information and scores
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- The app does not look great on mobiles so that is the next stage I'd work on for the styling
