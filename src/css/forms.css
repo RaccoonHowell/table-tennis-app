@@ -19,6 +19,7 @@ input {
     margin-right: 1rem; 
     background-color: var(--lightbl);
     color: var(--darkgr);
+    border-color: var(--darkbl);
 } 
 
 .add {

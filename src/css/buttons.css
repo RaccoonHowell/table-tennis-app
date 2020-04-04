@@ -4,7 +4,7 @@ button {
     width: 10rem;
     border-radius: 5px;
     background-color: var(--coral);
-    border-color: var(--darkbl);
+    border-color: var(--darkco);
     color: var(--darkgr);
     font-size: 1.2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

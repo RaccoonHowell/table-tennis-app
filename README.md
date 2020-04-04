@@ -2,9 +2,9 @@
 
 Developed as my final DevelopMe_ technical challenge, the app generates a table tennis tournament structure from a list of names provided by the user.
 
-Technologies and skills used: React, Javascript, HTML, CSS, Git, Wireframing
+Technologies and skills used: React, JSX, Javascript, HTML, CSS, Git, Wireframing
 
-You can view the finished app by visiting here: http://rachel.developme.space/
+You can view the finished app by visiting here: https://raccoonhowell.github.io/table-tennis-app/
 
 ### Local setup
 

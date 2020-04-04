@@ -10,3 +10,7 @@ li {
     color: var(--coral);
     font-size: 1.6rem;
 }
+
+::placeholder {
+    color: var(--darkgr);
+}
