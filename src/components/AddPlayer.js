@@ -44,20 +44,18 @@ export class AddPlayer extends Component {
             column1: [],
             column2: [],
             playersShuffled: [],
+            clicked: false,
         })
     }
 
     // shuffles the array using Math.random and splits it into 2 arrays using splice
     handlePairs() {
-        const { players } = this.state;
-
-        const halfLength = Math.floor(players.length / 2);
+        const halfLength = Math.floor(this.state.players.length / 2);
         
         const playersShuffled = [...this.state.players];
 
         this.setState({
             playersShuffled: playersShuffled.sort(() => Math.random() - 0.5),
-            // playersShuffled: this.handleShuffle(players),
             column1: playersShuffled.slice(0, halfLength),
             column2: playersShuffled.slice(halfLength, playersShuffled.length),
             clicked: true,
@@ -68,9 +66,12 @@ export class AddPlayer extends Component {
         const { players } = this.state; 
         
         const { column1 } = this.state;
+
+        const { clicked } = this.state;
         
         return (
             <>
+                {/* form section */}
                 <form className='form' onSubmit={this.handleSubmit}>
                     <label>Add an even number of players</label>
 
@@ -80,26 +81,40 @@ export class AddPlayer extends Component {
                         value={this.state.userInput}
                     />
 
-                    <button>Add Player</button>
-
+                    <button className='add'>Add Player</button>
                 </form>
+                
+                {/* section that displays player names when the array contains at least one item */}
+                <div className='players'>
+                    {players.length > 0 ?
+                        <h2>Players</h2>
+                        :
+                        null
+                    }
 
-                    {/* {!this.state.clicked ? */}
-                    <ul>Players
+                    <ul>
                         { players.map((player, i) => (
                             <li key={ i }>{ player }</li>
                         )) }
                     </ul>
-                    {/* : null} */}
-                
+                </div>
 
-                { players.length % 2 === 0 && players.length > 0 ?     
+                {/* generate pairs section - button shows unless uneven number of players entered and then the error <p> is displayed instead, once clicked and players even the shuffle <p> shows */}
+                <div className='pairs'>
+                    { players.length % 2 !== 0 && players.length > 0 ? 
+                        <p className="error">Add another player to make it an even number!</p>
+                        :
+                        <button onClick={ this.handlePairs }>Generate Pairs</button>   
+                    }
 
-                    <button onClick={ this.handlePairs }>Generate Pairs</button>
-                    :
-                    <p className="error">Add another player to make it an even number!</p>
-                }
+                    { clicked && players.length % 2 === 0  && players.length > 0 ? 
+                        <p>Click again to shuffle the pairs</p>
+                        :
+                        null
+                    }
+                </div>
 
+                {/* section that displays the pairings after generate pairings has been clicked, vs <p> shows as long as column 1 is not empty */}
                 <div className='columns'>
                     <ul className='column1'>
                         { this.state.column1.map((player, i) => (
@@ -108,7 +123,7 @@ export class AddPlayer extends Component {
                     </ul>
                     
                     { column1.length > 0 ?
-                        <p className='vs'>vs</p>
+                        <p className='vs'>vs.</p>
                         :
                         null
                     }  
@@ -120,7 +135,8 @@ export class AddPlayer extends Component {
                     </ul>
                 </div>
                 
-                <button onClick={ this.handleReset }>Start Again</button>
+                {/* start again button */}
+                <button className='refresh' onClick={ this.handleReset }>Start Again</button>
             </>
         );
     }

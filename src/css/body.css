@@ -1,0 +1,13 @@
+body {
+    background-color: var(--darkgr);
+    text-align: center; 
+}
+
+.players, .pairs {
+    padding: 1rem;
+}
+
+.players li {
+    display: inline-block;
+    padding: 1rem;
+}

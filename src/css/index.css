@@ -1,8 +1,9 @@
 /* setup */
 @import 'reset.css';
+@import 'settings.css';
 
 /* atoms */
-/* @import 'typography.css'; */
+@import 'typography.css';
 @import 'buttons.css';
 @import 'forms.css'; 
 @import 'columns.css';
@@ -12,13 +13,4 @@
 @import 'footer.css';
 
 /* pages */
-
-body {
-    background-color:lightgreen;
-    text-align: center; 
-}
-
-label, ul, li {
-    font-size: 1.2rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+@import 'body.css';
