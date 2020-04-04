@@ -30,6 +30,10 @@ export class AddPlayer extends Component {
     handleSubmit(e) {
         e.preventDefault();
 
+        if (this.state.userInput.length === 0) {
+            return;
+        }
+
         this.setState({
             userInput: '',
             players: [...this.state.players, this.state.userInput],
@@ -76,10 +80,11 @@ export class AddPlayer extends Component {
                     <label>Add an even number of players</label>
 
                     <input 
-                        placeholder="Enter player names here" 
-                        type="text" onChange={this.handleUserInput} 
+                        placeholder='Enter player names here' 
+                        type='text' onChange={this.handleUserInput} 
                         value={this.state.userInput}
-                        maxLength="20"
+                        maxLength='20'
+                        minLength='1'
                     />
 
                     <button className='add'>Add Player</button>
