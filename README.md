@@ -2,7 +2,7 @@
 
 Developed as my final DevelopMe_ technical challenge, the app generates a table tennis tournament structure from a list of names provided by the user.
 
-Technologies and skills used: React, JSX, Javascript, HTML, CSS, Git, Wireframing
+Technologies and skills used: React, JSX, Javascript, HTML, CSS, Git, Wireframing.
 
 You can view the finished app by visiting here: https://raccoonhowell.github.io/table-tennis-app/
 
@@ -56,12 +56,12 @@ However upon starting I created a Header, Footer and AddPlayer component. I deci
 
 ### Additional features
 
-- I would like to split the AddPlayer component into smaller component files based on the role of each part of the code and use Redux to do this. I think this would make the code more readable and using Redux would mean I could store state globally and pass information between components more easily
+- I would like to split the AddPlayer component into smaller component files based on the role of each part of the code and use Redux to do this. I think this would make the code more readable and using Redux would mean I could store state globally and pass information between components more easily.
 
-- I'd try to reduce the number of ternaries within the AddPlayer render section to make the code a bit cleaner
+- I'd try to reduce the number of ternaries within the AddPlayer render section to make the code a bit cleaner.
 
-- Having focussed on getting the MVP working before moving onto the advanced features I ran out of time. I'd like to set up a back end using Laravel to store user information and scores
+- Having focussed on getting the MVP working before moving onto the advanced features I ran out of time. I'd like to set up a back end using Laravel to store user information and scores.
 
-- The app does not look great on mobiles so that is the next stage I'd work on for the styling
+- The app does not look great on mobiles so that is the next stage I'd work on for the styling.
 
-- The user can still enter just a space in the input field and the AddPlayer button can be pressed adding spaces as a player name so I would find a way to fix this
+- The user can still enter just a space in the input field and the AddPlayer button can be pressed adding spaces as a player name so I would find a way to fix this.
