@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f6f3e78fef22fc6c670f9b5b7e18ea83",
+    "revision": "482d82924341320fab07dd7d1cdc88c9",
     "url": "/table-tennis-app/index.html"
   },
   {
-    "revision": "e7450ba07c71989617be",
-    "url": "/table-tennis-app/static/css/main.ab8e4aec.chunk.css"
+    "revision": "8cdc3ef99a068360e9d9",
+    "url": "/table-tennis-app/static/css/main.7472f9e9.chunk.css"
   },
   {
     "revision": "9f8d2b10144dce6c8ad6",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/table-tennis-app/static/js/2.175e5c2f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e7450ba07c71989617be",
+    "revision": "8cdc3ef99a068360e9d9",
     "url": "/table-tennis-app/static/js/main.12abed6c.chunk.js"
   },
   {
