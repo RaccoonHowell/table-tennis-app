@@ -79,6 +79,7 @@ export class AddPlayer extends Component {
                         placeholder="Enter player names here" 
                         type="text" onChange={this.handleUserInput} 
                         value={this.state.userInput}
+                        maxLength="20"
                     />
 
                     <button className='add'>Add Player</button>
