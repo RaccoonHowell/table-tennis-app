@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/table-tennis-app/static/css/main.7472f9e9.chunk.css",
-    "main.js": "/table-tennis-app/static/js/main.12abed6c.chunk.js",
-    "main.js.map": "/table-tennis-app/static/js/main.12abed6c.chunk.js.map",
+    "main.css": "/table-tennis-app/static/css/main.6100c53f.chunk.css",
+    "main.js": "/table-tennis-app/static/js/main.8d9d2c8c.chunk.js",
+    "main.js.map": "/table-tennis-app/static/js/main.8d9d2c8c.chunk.js.map",
     "runtime-main.js": "/table-tennis-app/static/js/runtime-main.bf0d6382.js",
     "runtime-main.js.map": "/table-tennis-app/static/js/runtime-main.bf0d6382.js.map",
     "static/js/2.175e5c2f.chunk.js": "/table-tennis-app/static/js/2.175e5c2f.chunk.js",
     "static/js/2.175e5c2f.chunk.js.map": "/table-tennis-app/static/js/2.175e5c2f.chunk.js.map",
     "index.html": "/table-tennis-app/index.html",
-    "precache-manifest.b5bc6063aed643a077974f4d9ce0a7ac.js": "/table-tennis-app/precache-manifest.b5bc6063aed643a077974f4d9ce0a7ac.js",
+    "precache-manifest.a107fd44ba32641d3ea20fcc6ee11bb4.js": "/table-tennis-app/precache-manifest.a107fd44ba32641d3ea20fcc6ee11bb4.js",
     "service-worker.js": "/table-tennis-app/service-worker.js",
-    "static/css/main.7472f9e9.chunk.css.map": "/table-tennis-app/static/css/main.7472f9e9.chunk.css.map",
+    "static/css/main.6100c53f.chunk.css.map": "/table-tennis-app/static/css/main.6100c53f.chunk.css.map",
     "static/js/2.175e5c2f.chunk.js.LICENSE.txt": "/table-tennis-app/static/js/2.175e5c2f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bf0d6382.js",
     "static/js/2.175e5c2f.chunk.js",
-    "static/css/main.7472f9e9.chunk.css",
-    "static/js/main.12abed6c.chunk.js"
+    "static/css/main.6100c53f.chunk.css",
+    "static/js/main.8d9d2c8c.chunk.js"
   ]
 }
