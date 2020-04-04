@@ -63,3 +63,5 @@ However upon starting I created a Header, Footer and AddPlayer component. I deci
 - Having focussed on getting the MVP working before moving onto the advanced features I ran out of time. I'd like to set up a back end using Laravel to store user information and scores
 
 - The app does not look great on mobiles so that is the next stage I'd work on for the styling
+
+- The user can still enter just a space in the input field and the AddPlayer button can be pressed adding spaces as a player name so I would find a way to fix this
