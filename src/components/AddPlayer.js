@@ -141,7 +141,7 @@ export class AddPlayer extends Component {
                     </ul>
                 </div>
                 
-                {/* start again button */}
+                {/* start again button resets the page to intial state */}
                 <button className='refresh' onClick={ this.handleReset }>Start Again</button>
             </>
         );
