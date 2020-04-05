@@ -16,12 +16,8 @@ input {
     text-align: center;
     height: 2.2rem;
     margin-top: 2rem;
-    margin-right: 1rem; 
+    margin-right: 2rem; 
     background-color: var(--lightbl);
     color: var(--darkgr);
     border-color: var(--darkbl);
-} 
-
-.add {
-    margin-left: 1rem;
 }

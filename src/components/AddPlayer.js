@@ -87,7 +87,7 @@ export class AddPlayer extends Component {
                         minLength='1'
                     />
 
-                    <button className='add'>Add Player</button>
+                    <button>Add Player</button>
                 </form>
                 
                 {/* section that displays player names when the array contains at least one item */}
