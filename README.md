@@ -56,7 +56,7 @@ However upon starting I created a Header, Footer and AddPlayer component. I deci
 
 ### Additional features
 
-- I would like to split the AddPlayer component into smaller component files based on the role of each part of the code and use Redux to do this. I think this would make the code more readable and using Redux would mean I could store state globally and pass information between components more easily.
+- I would like to split the AddPlayer component into smaller component files based on the role of each part of the code and use Redux to do this. I think this would make the code more readable and using Redux would mean I could store state globally and pass information between components more easily. Using Redux would enable me to move onto the more advanced optional tasks such as recording scores.
 
 - I'd try to reduce the number of ternaries within the AddPlayer render section to make the code a bit cleaner.
 
