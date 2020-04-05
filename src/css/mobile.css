@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+    input {
+        display: inline-block;
+        width: 80%;
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    button {
+        display: inline-block;
+    }
+    .players li {
+        display: block;
+        padding: 0.4rem;
+    }
+
+    .vs {
+        font-size: 1.4rem;
+    }
+}
