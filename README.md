@@ -64,4 +64,4 @@ However upon starting I created a Header, Footer and AddPlayer component. I deci
 
 - I used dev tools and my own phone to test how the app looks on mobiles and added in a mobile.css file. I used a max-width media query and made some changes to the layout and font size. Given more time I would test my app on different mobiles and tablets. I'd then adjust/add in more media queries as needed.
 
-- The user can still enter just a space in the input field and the AddPlayer button can be pressed adding spaces as a player name so I would find a way to fix this.
+- I fixed the bug of the user being able to click the AddPlayer button without having typed anything in the input field. I noticed this while testing the site quite late in the process and then realised the user can still enter just a space in the input field and the AddPlayer button can be pressed adding spaces as a player name so I would find a way to fix this.
