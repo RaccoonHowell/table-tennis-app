@@ -9,12 +9,29 @@
     button {
         display: inline-block;
     }
+
+    .column1 {
+        margin-left: 10%;
+     }
+
+     .column2 {
+        margin-right: 10%;
+    }
+
     .players li {
         display: block;
         padding: 0.4rem;
     }
 
+    .players, .pairs {
+        padding: 0.4rem;
+    }
+
     .vs {
         font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
     }
 }
