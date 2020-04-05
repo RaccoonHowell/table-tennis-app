@@ -62,6 +62,6 @@ However upon starting I created a Header, Footer and AddPlayer component. I deci
 
 - Having focussed on getting the MVP working before moving onto the advanced features I ran out of time. I'd like to set up a back end using Laravel to store user information and scores.
 
-- The app does not look great on mobiles so that is the next stage I'd work on for the styling.
+- I used dev tools and my own phone to test how the app looks on mobiles and added in a mobile.css file. I used a max-width media query and made some changes to the layout and font size. Given more time I would test my app on different mobiles and tablets. I'd then adjust/add in more media queries as needed.
 
 - The user can still enter just a space in the input field and the AddPlayer button can be pressed adding spaces as a player name so I would find a way to fix this.
